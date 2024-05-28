@@ -1,8 +1,13 @@
 import React from 'react';
-import '../App.css'; 
+import './settingsprofile.css';  // Update the path according to the new location
+import Menubar from "../components/menubar.jsx";
+import { Link } from 'react-router-dom';
+
 
 const Settings = () => {
   return (
+    <div>
+<Menubar></Menubar>
     <div className="settings-container">
       <h1>Settings</h1>
       <div className="tabs">
@@ -41,66 +46,23 @@ const Settings = () => {
           </div>
         </div>
       </div>
-      <div className="other-settings">
-        <h2>Other privacy settings</h2>
-        <p>Some settings, like restrict, apply to both Threads and Instagram and can be managed on Instagram.</p>
+      
         <div className="setting-item">
           <div className="setting-label">
             <i className="icon-block"></i>
-            <span>Blocked profiles</span>
+            <Link exact to="/delete" style={{textDecoration:"none", color:'black'}}><span>Delete profile</span></Link>
+            <i className="icon-hide"></i>
           </div>
           <i className="icon-external-link"></i>
         </div>
         <div className="setting-item">
           <div className="setting-label">
-            <i className="icon-hide"></i>
-            <span>Hide like and share counts</span>
-          </div>
-          <i className="icon-external-link"></i>
+            </div>
+            
         </div>
-      </div>
-    </div>
+      
+    </div></div>
   );
 };
 
 export default Settings;
-/*function SettingsModal({ onClose }) {
-  return (
-    
-    <div className="settings-modal">
-      <div className="modal-header">
-        <h3>Settings</h3>
-        <button className="close-button" onClick={onClose}>
-          Close
-        </button>
-      </div>
-      <div className="modal-content">
-        {/*  Sections for Privacy, Account, Help }
-        <section className="settings-section">
-          <h2>Privacy</h2>
-          <ul>
-            <li>Private profile</li>
-            <li>Mentions</li>
-            <li>Hidden Words</li>
-            <li>Other privacy settings</li>
-          </ul>
-        </section>
-        <section className="settings-section">
-          <h2>Account</h2>
-          <ul>
-            <li>Blocked profiles</li>
-            <li>Hide like and share counts</li>
-            {/* Add more options as needed }
-          </ul>
-        </section>
-        <section className="settings-section">
-          <h2>Help</h2>
-          <p>Visit our help center for more information.</p>
-          {/* Add a link to your help center }
-        </section>
-      </div>
-    </div>
-  );
-}
-
-export default SettingsModal;*/

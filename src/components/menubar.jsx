@@ -1,3 +1,6 @@
+
+
+
 import React from 'react';
 import './menubar.css';
 import Hpic from './pics/home.png';
@@ -50,9 +53,7 @@ function Menubar(){
     setShowPostForm(false);
   };
    
-  const Homeclick = () => {
- <Home/>
-  };
+  
  
 
 
@@ -62,7 +63,7 @@ function Menubar(){
      <div className='menu'>
       <img className="sociable" src={Logo} alt=""></img><h2>Sociable</h2>
       <div>
-      <div className="homebar" onClick={Homeclick}><img src={Hpic} alt=""></img><h3 >Home</h3></div>
+      <Link classname='rem' exact to={'/home'} style={{textDecoration:"none", color:'black'}}><div className="homebar" ><img src={Hpic} alt=""></img><h3 >Home</h3></div></Link>
 
       <Link className='rem' exact to={'/profilepage'}><div className='hprofile'><img src={Profpic} alt=""></img><h3>Profile</h3> </div></Link>
       
@@ -97,7 +98,7 @@ function Menubar(){
 
       <Link className='rem' exact to={'/settings'}><div className='hsettings' ><img src={Settpic}></img><h3>Settings</h3></div></Link>
 
-      <div className="logout"><img src={Logout}></img><h3 >Logout</h3></div>
+      <Link exact to={'/'} style={{textDecoration:'none', color:'black'}}><div className="logout"><img src={Logout}></img><h3 >Logout</h3></div></Link>
 
       </div>
     

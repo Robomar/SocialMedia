@@ -1,16 +1,11 @@
-*{
-    padding-left: 0px;
+
+body{
    
     
 }
-body{
-    display: flex;
-
-    min-height: 100vh;
-    /*box-sizing: border-box;*/
-}
 .menu{
-    
+    margin-left: -38%;
+    padding-left: 0px;
     /*background: linear-gradient(to right, rgb(250, 112, 154) 0%, rgb(254, 225, 64) 100%);*/
     background: white;
     position: fixed;
@@ -46,7 +41,7 @@ h2{
     padding: 2px;
 }
 .homebar:hover{
-    background:linear-gradient(to right, rgb(250, 112, 154) 0%, rgb(254, 225, 64) 100%);;
+    background:linear-gradient(to right, rgb(250, 112, 154) 0%, rgb(254, 225, 64) 100%);
     border-radius: 10px;
 }
 .logout{
@@ -139,5 +134,9 @@ h3{
     cursor: pointer;
     align-self: center; /* Align submit button to the end */
   }
+ .rem{
+    text-decoration: none;
+    color: black;
+ }
  
 
